@@ -1,0 +1,81 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Lead {
+  id          String   @id @default(cuid())
+  name        String
+  phone       String
+  email       String?
+  city        String?
+  requirement String?
+  status      String   @default("New") // New, Pending, Closed
+  source      String   @default("Website") // Contact, Quote, Calculator, Chatbot
+  createdAt   DateTime @default(now())
+}
+
+model Service {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  icon        String?
+  createdAt   DateTime @default(now())
+}
+
+model GalleryImage {
+  id        String   @id @default(cuid())
+  url       String
+  category  String   // Residential, Commercial, Industrial, Rooftop
+  title     String?
+  createdAt DateTime @default(now())
+}
+
+model Project {
+  id              String   @id @default(cuid())
+  title           String
+  imageUrl        String
+  kwInstalled     Float
+  clientType      String
+  location        String
+  savingsGenerated Float?
+  completionDate  String?
+  createdAt       DateTime @default(now())
+}
+
+model BlogPost {
+  id        String   @id @default(cuid())
+  title     String
+  content   String
+  imageUrl  String?
+  slug      String   @unique
+  createdAt DateTime @default(now())
+}
+
+model Testimonial {
+  id        String   @id @default(cuid())
+  clientName String
+  content   String
+  videoUrl  String?
+  rating    Int      @default(5)
+  createdAt DateTime @default(now())
+}
+
+model Faq {
+  id        String   @id @default(cuid())
+  question  String
+  answer    String
+  createdAt DateTime @default(now())
+}
+
+model TeamMember {
+  id        String   @id @default(cuid())
+  name      String
+  role      String
+  imageUrl  String?
+  createdAt DateTime @default(now())
+}
