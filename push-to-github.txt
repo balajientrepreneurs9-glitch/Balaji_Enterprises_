@@ -1,0 +1,67 @@
+=================================================================
+PUSH TO GITHUB - STEP BY STEP COMMANDS
+=================================================================
+
+STEP 1: Create GitHub Repository
+---------------------------------
+1. Go to: https://github.com/new
+2. Repository name: balaji-entrepreneurs
+3. Description: Premium solar energy company website
+4. Choose: Public or Private
+5. DO NOT check any boxes (no README, no .gitignore, no license)
+6. Click "Create repository"
+
+
+STEP 2: Copy Your Repository URL
+---------------------------------
+After creating, GitHub will show you a URL like:
+https://github.com/YOUR_USERNAME/balaji-entrepreneurs.git
+
+Copy this URL!
+
+
+STEP 3: Run These Commands
+---------------------------------
+Open PowerShell or Command Prompt and run:
+
+cd "c:\Users\Shivansh Singh\OneDrive\Desktop\balaji_entreprenures"
+
+git remote add origin https://github.com/YOUR_USERNAME/balaji-entrepreneurs.git
+
+git branch -M main
+
+git push -u origin main
+
+
+STEP 4: Enter Credentials
+---------------------------------
+When prompted:
+- Username: Your GitHub username
+- Password: Your Personal Access Token (NOT your password!)
+
+
+NEED A PERSONAL ACCESS TOKEN?
+---------------------------------
+1. Go to: https://github.com/settings/tokens
+2. Click "Generate new token (classic)"
+3. Name: Balaji Upload
+4. Check: repo (full control)
+5. Click "Generate token"
+6. COPY THE TOKEN (you won't see it again!)
+7. Use this as your password
+
+
+THAT'S IT!
+---------------------------------
+Your code will be uploaded to GitHub!
+
+Visit: https://github.com/YOUR_USERNAME/balaji-entrepreneurs
+
+=================================================================
+
+QUICK REFERENCE:
+- Check status: git status
+- View commits: git log --oneline
+- View remote: git remote -v
+
+=================================================================
