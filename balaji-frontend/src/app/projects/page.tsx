@@ -25,7 +25,7 @@ export default function ProjectsPage() {
   const allProjects = [
     {
       title: 'Green Valley Residential Complex',
-      location: 'Mumbai, Maharashtra',
+      location: 'Lucknow, Uttar Pradesh',
       capacity: '500 kW',
       year: '2024',
       image: '/images/project-1.jpg',
@@ -36,7 +36,7 @@ export default function ProjectsPage() {
     },
     {
       title: 'Tech Park Solar Installation',
-      location: 'Pune, Maharashtra',
+      location: 'Kanpur, Uttar Pradesh',
       capacity: '1.2 MW',
       year: '2024',
       image: '/images/project-2.jpg',
@@ -47,7 +47,7 @@ export default function ProjectsPage() {
     },
     {
       title: 'Manufacturing Unit Power Plant',
-      location: 'Nashik, Maharashtra',
+      location: 'Varanasi, Uttar Pradesh',
       capacity: '2.5 MW',
       year: '2023',
       image: '/images/project-3.jpg',
@@ -58,7 +58,7 @@ export default function ProjectsPage() {
     },
     {
       title: 'Luxury Villa Solar System',
-      location: 'Lonavala, Maharashtra',
+      location: 'Prayagraj, Uttar Pradesh',
       capacity: '15 kW',
       year: '2024',
       image: '/images/project-4.jpg',
@@ -69,7 +69,7 @@ export default function ProjectsPage() {
     },
     {
       title: 'Shopping Mall Energy Solution',
-      location: 'Thane, Maharashtra',
+      location: 'Agra, Uttar Pradesh',
       capacity: '800 kW',
       year: '2023',
       image: '/images/project-5.jpg',
@@ -80,7 +80,7 @@ export default function ProjectsPage() {
     },
     {
       title: 'Textile Factory Solar Plant',
-      location: 'Solapur, Maharashtra',
+      location: 'Meerut, Uttar Pradesh',
       capacity: '1.8 MW',
       year: '2023',
       image: '/images/project-6.jpg',
@@ -91,7 +91,7 @@ export default function ProjectsPage() {
     },
     {
       title: 'Residential Society Project',
-      location: 'Navi Mumbai, Maharashtra',
+      location: 'Gorakhpur, Uttar Pradesh',
       capacity: '350 kW',
       year: '2024',
       image: '/images/project-7.jpg',
@@ -102,7 +102,7 @@ export default function ProjectsPage() {
     },
     {
       title: 'Corporate Office Building',
-      location: 'Mumbai, Maharashtra',
+      location: 'Lucknow, Uttar Pradesh',
       capacity: '600 kW',
       year: '2023',
       image: '/images/project-8.jpg',
@@ -113,7 +113,7 @@ export default function ProjectsPage() {
     },
     {
       title: 'Pharmaceutical Plant',
-      location: 'Aurangabad, Maharashtra',
+      location: 'Bareilly, Uttar Pradesh',
       capacity: '3 MW',
       year: '2022',
       image: '/images/project-9.jpg',
@@ -124,7 +124,7 @@ export default function ProjectsPage() {
     },
     {
       title: 'Farmhouse Solar Installation',
-      location: 'Alibaug, Maharashtra',
+      location: 'Ayodhya, Uttar Pradesh',
       capacity: '25 kW',
       year: '2024',
       image: '/images/project-10.jpg',

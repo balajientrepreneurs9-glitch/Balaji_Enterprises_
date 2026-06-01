@@ -33,7 +33,7 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: 'Visit Us',
-      details: ['123 Solar Street, Green Park', 'Mumbai, Maharashtra 400001'],
+      details: ['Balaji Entrepreneurs', 'Lucknow, Uttar Pradesh, India'],
       link: 'https://maps.google.com'
     },
     {
@@ -55,7 +55,7 @@ export default function ContactPage() {
     },
     {
       question: 'What areas do you serve?',
-      answer: 'We primarily serve Maharashtra and surrounding states. However, for large commercial and industrial projects, we can work across India. Contact us to discuss your location.'
+      answer: 'We primarily serve Uttar Pradesh including Lucknow, Kanpur, Varanasi, Prayagraj, Agra, Meerut, Gorakhpur, Bareilly, Ayodhya, and Jhansi. Contact us to discuss your specific location.'
     },
     {
       question: 'Can I get a quote over the phone?',
@@ -233,7 +233,7 @@ export default function ContactPage() {
                   <div className="text-center text-white">
                     <MapPin className="w-16 h-16 mx-auto mb-4 text-secondary" />
                     <h3 className="text-2xl font-bold mb-2">Visit Our Office</h3>
-                    <p className="text-gray-200 mb-4">123 Solar Street, Green Park<br />Mumbai, Maharashtra 400001</p>
+                    <p className="text-gray-200 mb-4">Balaji Entrepreneurs<br />Lucknow, Uttar Pradesh, India</p>
                     <a
                       href="https://maps.google.com"
                       target="_blank"

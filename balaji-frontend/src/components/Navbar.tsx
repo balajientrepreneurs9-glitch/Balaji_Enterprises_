@@ -31,15 +31,15 @@ export default function Navbar() {
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-primary text-white py-2 hidden md:block">
+      <div className="bg-[#081B3A] text-white py-2 hidden md:block">
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
           <div className="flex justify-between items-center text-sm">
             <div className="flex items-center gap-6">
-              <a href="tel:+919876543210" className="flex items-center gap-2 hover:text-secondary transition-colors">
+              <a href="tel:+919876543210" className="flex items-center gap-2 hover:text-[#F4B400] transition-colors">
                 <Phone className="w-4 h-4" />
                 +91 98765 43210
               </a>
-              <a href="mailto:info@balajientrepreneurs.com" className="flex items-center gap-2 hover:text-secondary transition-colors">
+              <a href="mailto:info@balajientrepreneurs.com" className="flex items-center gap-2 hover:text-[#F4B400] transition-colors">
                 <Mail className="w-4 h-4" />
                 info@balajientrepreneurs.com
               </a>
@@ -55,11 +55,7 @@ export default function Navbar() {
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`sticky top-0 w-full z-50 transition-all duration-300 ${
-          scrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-lg'
-            : 'bg-white'
-        }`}
+        className="sticky top-0 w-full z-50 bg-white shadow-md transition-all duration-300"
       >
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
@@ -76,7 +72,7 @@ export default function Navbar() {
                 />
               </div>
               <div>
-                <span className="text-xl font-bold text-primary group-hover:text-secondary transition-colors">
+                <span className="text-xl font-bold text-[#081B3A] group-hover:text-[#F4B400] transition-colors">
                   Balaji Entrepreneurs
                 </span>
                 <p className="text-xs text-gray-600">
@@ -91,16 +87,16 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="font-medium text-gray-700 hover:text-secondary transition-colors relative group"
+                  className="font-medium text-gray-700 hover:text-[#F4B400] transition-colors relative group"
                 >
                   {link.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all group-hover:w-full"></span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#F4B400] transition-all group-hover:w-full"></span>
                 </Link>
               ))}
               
               <Link
                 href="/contact"
-                className="bg-secondary hover:bg-yellow-500 text-primary px-6 py-3 rounded-full font-semibold transition-all shadow-lg hover:shadow-xl hover:scale-105"
+                className="bg-[#F4B400] hover:bg-[#D49A00] text-[#081B3A] px-6 py-3 rounded-full font-semibold transition-all shadow-lg hover:shadow-xl hover:scale-105"
               >
                 Get Quote
               </Link>
@@ -109,7 +105,7 @@ export default function Navbar() {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 rounded-lg text-primary hover:bg-gray-100 transition-colors"
+              className="lg:hidden p-2 rounded-lg text-[#081B3A] hover:bg-gray-100 transition-colors"
             >
               {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -135,7 +131,7 @@ export default function Navbar() {
                   >
                     <Link
                       href={link.href}
-                      className="block px-4 py-3 text-gray-700 hover:bg-gray-100 hover:text-secondary rounded-lg font-medium transition-colors"
+                      className="block px-4 py-3 text-gray-700 hover:bg-gray-100 hover:text-[#F4B400] rounded-lg font-medium transition-colors"
                       onClick={() => setIsOpen(false)}
                     >
                       {link.label}
@@ -149,7 +145,7 @@ export default function Navbar() {
                 >
                   <Link
                     href="/contact"
-                    className="block text-center bg-secondary hover:bg-yellow-500 text-primary px-4 py-3 rounded-lg font-semibold transition-all mt-4"
+                    className="block text-center bg-[#F4B400] hover:bg-[#D49A00] text-[#081B3A] px-4 py-3 rounded-lg font-semibold transition-all mt-4"
                     onClick={() => setIsOpen(false)}
                   >
                     Get Quote

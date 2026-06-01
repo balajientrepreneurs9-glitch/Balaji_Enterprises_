@@ -28,12 +28,13 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-[#081B3A] text-white">
       {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Company Info */}
-          <motion.div
+      <div className="w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            {/* Company Info */}
+            <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -54,7 +55,7 @@ export default function Footer() {
                 <p className="text-xs text-gray-400">Solar Energy Solutions</p>
               </div>
             </Link>
-            <p className="text-gray-400 mb-6 leading-relaxed">
+            <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of sustainable solar energy solutions. Empowering businesses and homes with clean, renewable energy.
             </p>
             <div className="flex gap-4">
@@ -62,7 +63,7 @@ export default function Footer() {
                 href="https://facebook.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-gray-800 hover:bg-secondary flex items-center justify-center transition-all hover:scale-110"
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#F4B400] flex items-center justify-center transition-all hover:scale-110"
               >
                 <FaFacebookF className="w-5 h-5 text-white" />
               </a>
@@ -70,7 +71,7 @@ export default function Footer() {
                 href="https://twitter.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-gray-800 hover:bg-secondary flex items-center justify-center transition-all hover:scale-110"
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#F4B400] flex items-center justify-center transition-all hover:scale-110"
               >
                 <FaTwitter className="w-5 h-5 text-white" />
               </a>
@@ -78,7 +79,7 @@ export default function Footer() {
                 href="https://instagram.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-gray-800 hover:bg-secondary flex items-center justify-center transition-all hover:scale-110"
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#F4B400] flex items-center justify-center transition-all hover:scale-110"
               >
                 <FaInstagram className="w-5 h-5 text-white" />
               </a>
@@ -86,7 +87,7 @@ export default function Footer() {
                 href="https://linkedin.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-gray-800 hover:bg-secondary flex items-center justify-center transition-all hover:scale-110"
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#F4B400] flex items-center justify-center transition-all hover:scale-110"
               >
                 <FaLinkedinIn className="w-5 h-5 text-white" />
               </a>
@@ -106,7 +107,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-secondary transition-colors flex items-center gap-2 group"
+                    className="text-gray-300 hover:text-[#F4B400] transition-colors flex items-center gap-2 group"
                   >
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     {link.label}
@@ -129,7 +130,7 @@ export default function Footer() {
                 <li key={service}>
                   <Link
                     href="/services"
-                    className="text-gray-400 hover:text-secondary transition-colors flex items-center gap-2 group"
+                    className="text-gray-300 hover:text-[#F4B400] transition-colors flex items-center gap-2 group"
                   >
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     {service}
@@ -149,21 +150,21 @@ export default function Footer() {
             <h3 className="text-xl font-bold mb-6 text-white">Contact Us</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-secondary flex-shrink-0 mt-1" />
-                <span className="text-gray-400">
-                  123 Solar Street, Green City,<br />
-                  Maharashtra 400001, India
+                <MapPin className="w-5 h-5 text-[#F4B400] flex-shrink-0 mt-1" />
+                <span className="text-gray-300">
+                  Balaji Entrepreneurs,<br />
+                  Lucknow, Uttar Pradesh, India
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-secondary flex-shrink-0" />
-                <a href="tel:+919876543210" className="text-gray-400 hover:text-secondary transition-colors">
+                <Phone className="w-5 h-5 text-[#F4B400] flex-shrink-0" />
+                <a href="tel:+919876543210" className="text-gray-300 hover:text-[#F4B400] transition-colors">
                   +91 98765 43210
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-secondary flex-shrink-0" />
-                <a href="mailto:info@balajientrepreneurs.com" className="text-gray-400 hover:text-secondary transition-colors">
+                <Mail className="w-5 h-5 text-[#F4B400] flex-shrink-0" />
+                <a href="mailto:info@balajientrepreneurs.com" className="text-gray-300 hover:text-[#F4B400] transition-colors">
                   info@balajientrepreneurs.com
                 </a>
               </li>
@@ -176,35 +177,36 @@ export default function Footer() {
                 <input
                   type="email"
                   placeholder="Your email"
-                  className="flex-1 px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-secondary"
+                  className="flex-1 px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F4B400]"
                 />
                 <button
                   type="submit"
-                  className="bg-secondary hover:bg-yellow-500 text-primary px-4 py-2 rounded-lg font-semibold transition-all"
+                  className="bg-[#F4B400] hover:bg-[#D49A00] text-[#081B3A] px-4 py-2 rounded-lg font-semibold transition-all"
                 >
                   <ArrowRight className="w-5 h-5" />
                 </button>
               </form>
             </div>
           </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+      <div className="w-full border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-300">
             <p>
               © {currentYear} Balaji Entrepreneurs. All rights reserved.
             </p>
             <div className="flex gap-6">
-              <Link href="/privacy" className="hover:text-secondary transition-colors">
+              <Link href="/privacy" className="hover:text-[#F4B400] transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="hover:text-secondary transition-colors">
+              <Link href="/terms" className="hover:text-[#F4B400] transition-colors">
                 Terms of Service
               </Link>
-              <Link href="/sitemap" className="hover:text-secondary transition-colors">
+              <Link href="/sitemap" className="hover:text-[#F4B400] transition-colors">
                 Sitemap
               </Link>
             </div>

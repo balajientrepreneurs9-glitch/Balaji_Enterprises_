@@ -52,7 +52,7 @@ export default function ContactForm() {
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="bg-gradient-to-br from-secondary to-yellow-500 rounded-3xl p-12 text-center text-primary"
+        className="bg-gradient-to-br from-[#F4B400] to-[#D49A00] rounded-3xl p-12 text-center text-[#081B3A] shadow-2xl"
       >
         <CheckCircle className="w-20 h-20 mx-auto mb-6" />
         <h3 className="text-3xl font-bold mb-4">Thank You!</h3>
@@ -77,7 +77,7 @@ export default function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-secondary focus:outline-none transition-colors"
+            className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-[#F4B400] focus:outline-none transition-colors"
             placeholder="John Doe"
           />
         </div>
@@ -93,7 +93,7 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-secondary focus:outline-none transition-colors"
+            className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-[#F4B400] focus:outline-none transition-colors"
             placeholder="john@example.com"
           />
         </div>
@@ -111,7 +111,7 @@ export default function ContactForm() {
             value={formData.phone}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-secondary focus:outline-none transition-colors"
+            className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-[#F4B400] focus:outline-none transition-colors"
             placeholder="+91 98765 43210"
           />
         </div>
@@ -126,7 +126,7 @@ export default function ContactForm() {
             value={formData.service}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-secondary focus:outline-none transition-colors bg-white"
+            className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-[#F4B400] focus:outline-none transition-colors bg-white"
           >
             <option value="Residential Solar">Residential Solar</option>
             <option value="Commercial Solar">Commercial Solar</option>
@@ -149,7 +149,7 @@ export default function ContactForm() {
           onChange={handleChange}
           required
           rows={6}
-          className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-secondary focus:outline-none transition-colors resize-none"
+          className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-[#F4B400] focus:outline-none transition-colors resize-none"
           placeholder="Tell us about your project requirements..."
         />
       </div>
@@ -157,7 +157,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-gradient-to-r from-primary to-blue-900 hover:from-blue-900 hover:to-primary text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-lg hover:shadow-xl hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+        className="w-full bg-gradient-to-r from-[#081B3A] to-blue-900 hover:from-blue-900 hover:to-[#081B3A] text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-lg hover:shadow-xl hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
       >
         {isSubmitting ? (
           <>

@@ -1,332 +1,345 @@
-# ⚡ Balaji Entrepreneurs - Solar Energy Solutions
+# Balaji Entrepreneurs - Solar Energy Solutions
 
-<div align="center">
+Complete production-ready Next.js application for solar energy business with admin dashboard, lead management, and solar calculator.
 
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![Next.js](https://img.shields.io/badge/Next.js-16.2.6-black)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.3.0-38bdf8)
-![License](https://img.shields.io/badge/license-MIT-green)
-
-**A premium, production-ready solar energy company website built with Next.js, TypeScript, and Tailwind CSS**
-
-[Live Demo](#) • [Documentation](#-documentation) • [Features](#-features) • [Getting Started](#-getting-started)
-
-</div>
-
----
-
-## 🌟 Overview
-
-Balaji Entrepreneurs is a modern, premium solar energy company website featuring a clean design, smooth animations, and full responsiveness. Built with the latest web technologies to provide an exceptional user experience.
-
-### ✨ Design Inspiration
-- **Tesla Energy** - Clean, bold, modern
-- **Waaree** - Professional, trustworthy
-- **SunPower** - Premium, responsive
-- **Modern SaaS** - Interactive, engaging
-
----
-
-## 🎯 Features
-
-### 🎨 Design & UI
-- ✅ Premium modern aesthetic
-- ✅ Smooth Framer Motion animations
-- ✅ Glassmorphism effects
-- ✅ Gradient backgrounds
-- ✅ Professional typography (Inter font)
-- ✅ Consistent spacing and layout
-- ✅ Dark mode footer
-
-### 📱 Responsive Design
-- ✅ Mobile-first approach
-- ✅ Tablet optimized
-- ✅ Desktop layouts
-- ✅ Large screen support
-- ✅ No overflow issues
-
-### 🚀 Performance
-- ✅ Fast build times (~3.3s)
-- ✅ Next.js Image optimization
-- ✅ Lazy loading
-- ✅ Efficient animations
-- ✅ Clean code structure
-
-### 🎯 Functionality
-- ✅ Contact form with validation
-- ✅ Image lightbox with keyboard navigation
-- ✅ Category filtering (Projects, Gallery, Blog)
-- ✅ Search functionality
-- ✅ FAQ accordions
-- ✅ Animated statistics counters
-- ✅ Newsletter signup
-
----
-
-## 📄 Pages
-
-| Page | Route | Description |
-|------|-------|-------------|
-| **Homepage** | `/` | Hero, services, projects, testimonials, FAQ |
-| **About** | `/about` | Company story, team, timeline, certifications |
-| **Services** | `/services` | Detailed services, process, comparison table |
-| **Projects** | `/projects` | Portfolio with filtering and stats |
-| **Gallery** | `/gallery` | Image gallery with lightbox |
-| **Blog** | `/blog` | Articles with search and categories |
-| **Contact** | `/contact` | Contact form and company info |
-
----
-
-## 🛠️ Tech Stack
+## 🚀 Features
 
 ### Frontend
-- **Framework**: [Next.js 16.2.6](https://nextjs.org/) (App Router)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Icons**: [Lucide React](https://lucide.dev/) + [React Icons](https://react-icons.github.io/react-icons/)
-- **Images**: Next.js Image optimization
+- ✅ Responsive homepage with hero section
+- ✅ About page with company history
+- ✅ Services showcase
+- ✅ Project portfolio
+- ✅ Testimonials
+- ✅ FAQ section
+- ✅ Contact form with lead capture
+- ✅ Solar calculator with ROI estimation
+- ✅ Floating chat widget
+- ✅ WhatsApp integration
+- ✅ SEO optimized
 
-### Backend
-- **Framework**: Next.js API Routes
-- **Database**: [Prisma](https://www.prisma.io/) + SQLite
-- **Admin Panel**: Custom admin dashboard
+### Backend & APIs
+- ✅ RESTful API routes for all modules
+- ✅ Prisma ORM with PostgreSQL
+- ✅ Zod validation for all inputs
+- ✅ NextAuth authentication
+- ✅ Role-based access control
+- ✅ Lead management system
+- ✅ Project CRUD operations
+- ✅ Blog management
+- ✅ Gallery management
+- ✅ FAQ management
+- ✅ Team management
+- ✅ Solar calculator API
 
----
+### Admin Dashboard
+- ✅ Secure authentication
+- ✅ Dashboard analytics
+- ✅ Lead management
+- ✅ Project management
+- ✅ Content management
+- ✅ User management
 
-## 🚀 Getting Started
+## 📦 Tech Stack
+
+- **Framework**: Next.js 15.1.3
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 3.4.17
+- **Database**: PostgreSQL (Neon)
+- **ORM**: Prisma 5.22.0
+- **Authentication**: NextAuth.js
+- **Validation**: Zod
+- **Animations**: Framer Motion
+- **Icons**: Lucide React, React Icons
+- **Forms**: React Hook Form
+
+## 🛠️ Installation
 
 ### Prerequisites
 - Node.js 18+ installed
+- PostgreSQL database (Neon recommended)
 - npm or yarn package manager
 
-### Installation
+### Step 1: Clone and Install
 
-1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/balaji-entrepreneurs.git
-cd balaji-entrepreneurs
-```
-
-2. **Install dependencies**
-
-**Frontend:**
-```bash
-cd balaji-frontend
+# Install dependencies
 npm install
-```
 
-**Backend:**
-```bash
-cd balaji-backend
-npm install
-```
-
-3. **Set up environment variables**
-
-**Frontend** (`.env.local`):
-```env
-NEXT_PUBLIC_API_URL=http://localhost:3001
-```
-
-**Backend** (`.env`):
-```env
-DATABASE_URL="file:./dev.db"
-```
-
-4. **Run database migrations**
-```bash
-cd balaji-backend
+# Generate Prisma Client
 npx prisma generate
+```
+
+### Step 2: Environment Variables
+
+Create or update `.env` file with your credentials:
+
+```env
+# Database - IMPORTANT: Update with your valid Neon database URL
+DATABASE_URL="postgresql://USER:PASSWORD@HOST/DATABASE?sslmode=require"
+
+# NextAuth
+NEXTAUTH_SECRET="your-secret-key-minimum-32-characters-long"
+NEXTAUTH_URL="http://localhost:3000"
+
+# Admin Credentials
+ADMIN_EMAIL="admin@balajientrepreneurs.com"
+ADMIN_PASSWORD="your-secure-password"
+```
+
+**⚠️ DATABASE SETUP REQUIRED:**
+
+The provided database URL appears to be invalid or inaccessible. You need to:
+
+1. Create a new Neon database at https://neon.tech
+2. Copy the connection string
+3. Update `DATABASE_URL` in `.env`
+4. Run database migrations
+
+### Step 3: Database Setup
+
+```bash
+# Push schema to database
 npx prisma db push
+
+# Seed demo data (optional)
+npm run prisma:seed
+
+# Or create migration
+npx prisma migrate dev --name init
 ```
 
-5. **Start development servers**
+### Step 4: Create Admin User
 
-**Frontend** (Port 3000):
+Run this script to create an admin user:
+
 ```bash
-cd balaji-frontend
+node scripts/create-admin.js
+```
+
+Or manually in Prisma Studio:
+
+```bash
+npx prisma studio
+```
+
+### Step 5: Run Development Server
+
+```bash
 npm run dev
 ```
 
-**Backend** (Port 3001):
-```bash
-cd balaji-backend
-npm run dev
-```
+Open [http://localhost:3000](http://localhost:3000)
 
-6. **Open your browser**
-- Frontend: http://localhost:3000
-- Backend Admin: http://localhost:3001/admin
-
----
-
-## 📦 Project Structure
+## 📁 Project Structure
 
 ```
 balaji-entrepreneurs/
-├── balaji-frontend/          # Frontend Next.js application
-│   ├── public/
-│   │   ├── images/          # 30+ project images
-│   │   └── logos/           # Company logos
-│   ├── src/
-│   │   ├── app/             # Next.js App Router pages
-│   │   ├── components/      # 14 reusable components
-│   │   └── lib/             # Utility functions
-│   └── package.json
-│
-├── balaji-backend/           # Backend API & Admin
-│   ├── prisma/              # Database schema
-│   ├── src/
-│   │   ├── app/
-│   │   │   ├── api/         # API routes
-│   │   │   └── admin/       # Admin panel
-│   │   └── lib/             # Prisma client
-│   └── package.json
-│
-└── Documentation/            # Project documentation
+├── prisma/
+│   ├── schema.prisma          # Database schema
+│   └── seed.ts                # Seed data
+├── public/
+│   ├── images/                # Project images
+│   └── logos/                 # Brand logos
+├── src/
+│   ├── app/
+│   │   ├── api/               # API routes
+│   │   │   ├── auth/          # NextAuth
+│   │   │   ├── leads/         # Lead management
+│   │   │   ├── projects/      # Projects CRUD
+│   │   │   ├── blog/          # Blog posts
+│   │   │   ├── calculator/    # Solar calculator
+│   │   │   └── ...
+│   │   ├── admin/             # Admin dashboard
+│   │   ├── about/             # About page
+│   │   ├── layout.tsx         # Root layout
+│   │   ├── page.tsx           # Homepage
+│   │   └── globals.css        # Global styles
+│   ├── components/            # React components
+│   │   ├── Navbar.tsx
+│   │   ├── Footer.tsx
+│   │   ├── ServiceCard.tsx
+│   │   └── ...
+│   ├── lib/
+│   │   ├── prisma.ts          # Prisma client
+│   │   ├── auth.ts            # Auth utilities
+│   │   └── validations.ts     # Zod schemas
+│   └── middleware.ts          # Route protection
+├── .env                       # Environment variables
+├── .env.example               # Example env file
+├── package.json
+├── tsconfig.json
+├── tailwind.config.ts
+└── next.config.ts
 ```
 
----
+## 🔌 API Endpoints
 
-## 🎨 Design System
+### Public APIs
 
-### Colors
-```css
-Primary: #081B3A (Deep Navy Blue)
-Secondary: #F4B400 (Solar Yellow)
-White: #ffffff
-Gray: #f5f5f5
-Text: #222222
+```
+GET  /api/projects?category=Residential&page=1&limit=12
+GET  /api/testimonials?featured=true&limit=10
+GET  /api/blog?category=Solar&page=1
+GET  /api/faq?category=General
+GET  /api/services
+GET  /api/gallery?category=Residential
+POST /api/leads              # Create lead
+POST /api/calculator         # Calculate solar ROI
 ```
 
-### Typography
-- **Font**: Inter (Google Fonts)
-- **Headings**: 4xl-7xl, Bold
-- **Body**: lg-xl, Regular
+### Protected APIs (Admin Only)
 
-### Components
-- **Border Radius**: rounded-2xl to rounded-3xl
-- **Shadows**: shadow-lg to shadow-2xl
-- **Transitions**: duration-300 to duration-500
+```
+POST   /api/projects         # Create project
+PUT    /api/projects/:id     # Update project
+DELETE /api/projects/:id     # Delete project
+POST   /api/blog             # Create blog post
+POST   /api/testimonials     # Create testimonial
+```
 
----
+## 🔐 Authentication
 
-## 🧩 Components
+### Admin Login
 
-### Core Components (14)
-1. **Navbar** - Premium sticky navigation
-2. **Footer** - Dark footer with social links
-3. **FloatingFeatures** - Floating action widgets
-4. **SectionHeading** - Consistent section headers
-5. **ServiceCard** - Service display cards
-6. **ProjectCard** - Project showcase cards
-7. **TestimonialCard** - Customer testimonials
-8. **FAQAccordion** - Interactive FAQ
-9. **CTASection** - Call-to-action sections
-10. **StatsCard** - Animated statistics
-11. **BlogCard** - Blog post cards
-12. **FilterButtons** - Category filtering
-13. **Lightbox** - Full-screen image viewer
-14. **ContactForm** - Form with validation
+Navigate to `/admin/login` and use credentials from `.env`:
 
----
+```
+Email: admin@balajientrepreneurs.com
+Password: (from ADMIN_PASSWORD in .env)
+```
 
-## 📊 Build & Performance
+### Protected Routes
 
-### Build Stats
-- **Build Time**: ~3.3 seconds
-- **TypeScript**: ~4.4 seconds
-- **Errors**: 0
-- **Status**: Production Ready
+All `/admin/*` routes are protected and require authentication.
 
-### Performance Metrics
-- ✅ Fast page loads
-- ✅ Optimized images
-- ✅ Lazy loading
-- ✅ Efficient animations
-- ✅ Clean code
+## 🧪 Testing
 
----
+```bash
+# Run type checking
+npm run type-check
+
+# Run linting
+npm run lint
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
+```
+
+## 📊 Database Schema
+
+### Main Models
+
+- **User**: Admin users with authentication
+- **Lead**: Contact form submissions and inquiries
+- **Project**: Solar installation projects
+- **Testimonial**: Customer reviews
+- **Blog**: Blog posts and articles
+- **Gallery**: Project images
+- **FAQ**: Frequently asked questions
+- **Service**: Service offerings
+- **Team**: Team members
+- **Calculation**: Solar calculator results
 
 ## 🚀 Deployment
 
 ### Vercel (Recommended)
 
-**Frontend:**
+1. Push code to GitHub
+2. Import project in Vercel
+3. Add environment variables
+4. Deploy
+
 ```bash
-cd balaji-frontend
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
 vercel
 ```
 
-**Backend:**
-```bash
-cd balaji-backend
-vercel
+### Environment Variables for Production
+
+```env
+DATABASE_URL="your-production-database-url"
+NEXTAUTH_SECRET="your-production-secret"
+NEXTAUTH_URL="https://yourdomain.com"
 ```
 
-### Other Platforms
-- Netlify
-- AWS Amplify
-- Digital Ocean
-- Custom server
+## 🔧 Configuration
+
+### Tailwind Colors
+
+Primary: `#081B3A` (Navy Blue)
+Secondary: `#F4B400` (Golden Yellow)
+
+### Image Optimization
+
+Images are optimized using Next.js Image component. Add domains to `next.config.ts`:
+
+```typescript
+images: {
+  domains: ['your-cdn-domain.com'],
+}
+```
+
+## 📝 Scripts
+
+```json
+{
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint",
+  "prisma:generate": "prisma generate",
+  "prisma:push": "prisma db push",
+  "prisma:seed": "tsx prisma/seed.ts",
+  "prisma:studio": "prisma studio"
+}
+```
+
+## 🐛 Troubleshooting
+
+### Database Connection Issues
+
+If you see `P1000: Authentication failed`:
+
+1. Verify DATABASE_URL is correct
+2. Check database is accessible
+3. Ensure SSL mode is set correctly
+4. Try creating a new Neon database
+
+### Build Errors
+
+```bash
+# Clear cache and rebuild
+rm -rf .next node_modules
+npm install
+npm run build
+```
+
+### Prisma Issues
+
+```bash
+# Regenerate Prisma Client
+npx prisma generate
+
+# Reset database (⚠️ deletes all data)
+npx prisma migrate reset
+```
+
+## 📞 Support
+
+For issues or questions:
+- Email: info@balajientrepreneurs.com
+- Phone: +91 98765 43210
+
+## 📄 License
+
+Copyright © 2024 Balaji Entrepreneurs. All rights reserved.
 
 ---
 
-## 📚 Documentation
-
-- **[FINAL_REPORT.md](./FINAL_REPORT.md)** - Complete project report
-- **[PREMIUM_FRONTEND_STATUS.md](./PREMIUM_FRONTEND_STATUS.md)** - Detailed status
-- **[START_HERE.md](./START_HERE.md)** - Quick reference guide
-- **[PROJECT_SUMMARY.md](./PROJECT_SUMMARY.md)** - Overview
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 👥 Authors
-
-- **Balaji Entrepreneurs Team** - *Initial work*
-
----
-
-## 🙏 Acknowledgments
-
-- Design inspiration from Tesla Energy, Waaree, and SunPower
-- Built with Next.js, Tailwind CSS, and Framer Motion
-- Icons from Lucide React and React Icons
-
----
-
-## 📞 Contact
-
-- **Website**: [www.balajientrepreneurs.com](#)
-- **Email**: info@balajientrepreneurs.com
-- **Phone**: +91 98765 43210
-
----
-
-<div align="center">
-
-**⭐ Star this repo if you find it helpful!**
-
-Made with ❤️ by Balaji Entrepreneurs
-
-</div>
+**Built with ❤️ for a sustainable future**

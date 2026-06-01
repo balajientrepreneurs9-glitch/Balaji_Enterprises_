@@ -1,0 +1,174 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String
+  role      String   @default("admin") // admin, user
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([email])
+}
+
+model Lead {
+  id          String   @id @default(cuid())
+  name        String
+  phone       String
+  email       String?
+  city        String?
+  requirement String?
+  status      String   @default("New") // New, Contacted, Qualified, Closed
+  source      String   @default("Website") // Website, Contact, Quote, Calculator, Chatbot
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([status])
+  @@index([source])
+  @@index([createdAt])
+}
+
+model Service {
+  id          String   @id @default(cuid())
+  title       String
+  description String   @db.Text
+  icon        String?
+  features    String[] @default([])
+  active      Boolean  @default(true)
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([active])
+  @@index([order])
+}
+
+model GalleryImage {
+  id        String   @id @default(cuid())
+  url       String
+  category  String   // Residential, Commercial, Industrial, Rooftop
+  title     String?
+  alt       String?
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([category])
+  @@index([active])
+}
+
+model Project {
+  id               String   @id @default(cuid())
+  title            String
+  description      String?  @db.Text
+  imageUrl         String
+  kwInstalled      Float
+  clientType       String   // Residential, Commercial, Industrial
+  location         String
+  savingsGenerated Float?
+  completionDate   String?
+  active           Boolean  @default(true)
+  featured         Boolean  @default(false)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@index([clientType])
+  @@index([active])
+  @@index([featured])
+}
+
+model BlogPost {
+  id          String   @id @default(cuid())
+  title       String
+  content     String   @db.Text
+  excerpt     String?  @db.Text
+  imageUrl    String?
+  slug        String   @unique
+  author      String   @default("Balaji Entrepreneurs")
+  category    String   @default("Solar Energy")
+  readTime    String   @default("5 min read")
+  published   Boolean  @default(true)
+  publishedAt DateTime @default(now())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([slug])
+  @@index([published])
+  @@index([publishedAt])
+}
+
+model Testimonial {
+  id         String   @id @default(cuid())
+  clientName String
+  role       String?
+  company    String?
+  content    String   @db.Text
+  videoUrl   String?
+  rating     Int      @default(5)
+  active     Boolean  @default(true)
+  featured   Boolean  @default(false)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([active])
+  @@index([featured])
+  @@index([rating])
+}
+
+model Faq {
+  id        String   @id @default(cuid())
+  question  String
+  answer    String   @db.Text
+  category  String   @default("General")
+  order     Int      @default(0)
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([category])
+  @@index([active])
+  @@index([order])
+}
+
+model TeamMember {
+  id          String   @id @default(cuid())
+  name        String
+  role        String
+  description String?  @db.Text
+  imageUrl    String?
+  email       String?
+  phone       String?
+  active      Boolean  @default(true)
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([active])
+  @@index([order])
+}
+
+model Calculation {
+  id                String   @id @default(cuid())
+  monthlyBill       Float
+  location          String?
+  usageType         String?
+  systemSize        Float
+  monthlySavings    Float
+  annualSavings     Float
+  paybackPeriod     Float
+  co2Reduction      Float
+  customerName      String?
+  customerEmail     String?
+  customerPhone     String?
+  createdAt         DateTime @default(now())
+
+  @@index([createdAt])
+}

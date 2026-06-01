@@ -58,7 +58,7 @@ export default function AboutPage() {
     {
       year: '2012',
       title: '1000+ Installations',
-      description: 'Crossed our first major milestone with installations across Maharashtra.'
+      description: 'Crossed our first major milestone with installations across Uttar Pradesh.'
     },
     {
       year: '2016',
@@ -115,7 +115,7 @@ export default function AboutPage() {
   return (
     <main className="overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center bg-gradient-to-br from-primary via-blue-900 to-primary overflow-hidden">
+      <section className="w-full relative min-h-[70vh] flex items-center justify-center bg-gradient-to-br from-primary via-blue-900 to-primary overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/hero-bg.jpg"
@@ -125,7 +125,7 @@ export default function AboutPage() {
           />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-32 text-center">
+        <div className="w-full relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -146,8 +146,8 @@ export default function AboutPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <section className="w-full py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <motion.div
@@ -169,8 +169,8 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <section className="w-full py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -189,7 +189,7 @@ export default function AboutPage() {
                 </p>
                 <p>
                   What started as a small team of passionate engineers has grown into one of 
-                  Maharashtra's most trusted solar energy companies, serving over 5,000 satisfied 
+                  Uttar Pradesh's most trusted solar energy companies, serving over 5,000 satisfied 
                   customers across residential, commercial, and industrial sectors.
                 </p>
                 <p>
@@ -225,8 +225,8 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <section className="w-full py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -263,8 +263,8 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <section className="w-full py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <p className="text-secondary font-semibold uppercase tracking-wider mb-3">Our Values</p>
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
@@ -297,8 +297,8 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <section className="w-full py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <p className="text-secondary font-semibold uppercase tracking-wider mb-3">Our Journey</p>
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
@@ -354,8 +354,8 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <section className="w-full py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <p className="text-secondary font-semibold uppercase tracking-wider mb-3">Our Team</p>
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
@@ -366,7 +366,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {team.map((member, index) => (
               <motion.div
                 key={index}
@@ -374,9 +374,9 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                className="w-full bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
               >
-                <div className="relative h-80">
+                <div className="relative w-full h-80">
                   <Image
                     src={member.image}
                     alt={member.name}
@@ -396,8 +396,8 @@ export default function AboutPage() {
       </section>
 
       {/* Certifications */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <section className="w-full py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <p className="text-secondary font-semibold uppercase tracking-wider mb-3">Certifications</p>
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
@@ -427,8 +427,8 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-primary to-blue-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 text-center">
+      <section className="w-full py-20 bg-gradient-to-br from-primary to-blue-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
